@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Anshika 💖🌸</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6fa, #f3d8ff, #ffe4ff);
+      color: #4b2e63;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background Hearts */
+    .heart-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      color: #ff8ad4;
+      animation: floatUp 6s infinite linear;
+      opacity: 0.6;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: .8; }
+      100% { transform: translateY(-120vh); opacity: 0; }
+    }
+
+    /* Mouse Emoji Trail */
+    .trail-emoji {
+      position: fixed;
+      font-size: 22px;
+      pointer-events: none;
+      animation: vanish 1s forwards;
+    }
+    @keyframes vanish {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0); }
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      padding: 14px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      z-index: 2000;
+    }
+
+    nav a {
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 25px;
+      color: #7a4c8d;
+      background: rgba(255,255,255,0.6);
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #f0c8ff;
+      transform: scale(1.1);
+    }
+
+    /* Sections */
+    section {
+      padding: 140px 20px 80px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      z-index: 10;
+      position: relative;
+    }
+
+    .decor-box {
+      background: rgba(255,255,255,0.65);
+      padding: 25px;
+      border-radius: 22px;
+      max-width: 750px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+      backdrop-filter: blur(5px);
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    /* Super Buttons */
+    .magic-btn {
+      padding: 12px 22px;
+      margin: 8px;
+      background: linear-gradient(135deg, #ffa6f6, #d6a4ff);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      transition: .3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .magic-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    /* Firework Animation */
+    .firework {
+      position: fixed;
+      font-size: 20px;
+      animation: boom 1s ease-out;
+      pointer-events: none;
+    }
+    @keyframes boom {
+      0% { opacity:1; transform: scale(0); }
+      100% { opacity:0; transform: scale(2); }
+    }
+
+    /* Contact Form */
+    form input, form textarea {
+      width: 90%;
+      max-width: 350px;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: 1px solid #d1a8ff;
+    }
+    form button {
+      padding: 12px 20px;
+      background: #c28aff;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Animated Heart Background -->
+<div class="heart-bg" id="heart-bg"></div>
+
+<header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About You</a>
+    <a href="#friends">Friends</a>
+    <a href="#memories">Memories</a>
+    <a href="#fun">Fun Zone</a>
+    
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+  <h1 style="font-size:40px;">For Anshika 💖🌸✨</h1>
+
+  <div class="decor-box">
+    <p>Welcome to your own pastel universe filled with love, sparkles & magic 💕✨</p>
+    <p>You make the world brighter just by being in it 🌸💫</p>
+  </div>
+
+  <div class="decor-box" style="margin-top:30px;">
+    <button class="magic-btn" onclick="fireworks(event);location.href='#about'">Why You're Beautiful 💗</button>
+    <button class="magic-btn" onclick="fireworks(event);location.href='#fun'">Fun Zone 🎉</button>
+    <button class="magic-btn" onclick="fireworks(event);location.href='#contact'">Send a Hi 💌</button>
+  </div>
+</section>
+
+<!-- MCQ FUN START -->
+<div class="decor-box" style="margin-top:40px;">
+  <h2>💜 Quick Questions for You 💜</h2>
+  <p style="font-size:20px;">Do you love me back? 😳💘</p>
+  <button class="magic-btn">Yes 💗</button>
+  <button class="magic-btn">Ofc 😌💞</button>
+  <p style="font-size:20px;margin-top:20px;">Do you think I'm cute? 😉✨</p>
+  <button class="magic-btn">Yes 😍</button>
+  <button class="magic-btn">Ofc ✨</button>
+  <p style="font-size:20px;margin-top:20px;">Should we celebrate your birthday on 30 July together? 🎂💜</p>
+  <button class="magic-btn">Yes 🎉</button>
+  <button class="magic-btn">Ofc 😘</button>
+  <div style="font-size:30px;margin-top:20px;">💜🌸💖✨🌺💘💞💫💐💟💗💜</div>
+</div>
+<!-- MCQ FUN END -->
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About You ✨💞</h2>
+  <div class="decor-box">
+    <p>You’re the kind of person whose presence feels like soft sunlight 💜✨</p>
+    <p>Your smile? Certified heart‑melter 💘😊</p>
+    <p>Your energy? Warm, rare, unforgettable 🌸💫</p>
+  </div>
+</section>
+
+<!-- FRIENDS -->
+<section id="friends">
+  <h2>Ashi & Priyanshi 👭🌸✨</h2>
+  <div class="decor-box">
+    <p>Two amazing souls who add sparkle to your world ✨</p>
+    <p>They’re the real MVPs of friendship 👑💖</p>
+  </div>
+</section>
+
+<!-- MEMORIES -->
+<section id="memories">
+  <h2>Emoji Memories 📚💘✨</h2>
+  <div class="decor-box">
+    <p>💖 Random laughs that healed everything</p>
+    <p>🌺 Cute chaos & dumb jokes</p>
+    <p>💞 Silent glances that felt like whole conversations</p>
+    <p>🌙 Inside jokes only you understand</p>
+  </div>
+</section>
+
+<!-- FUN ZONE -->
+<section id="fun">
+  <h2>Fun Zone 🎉💗</h2>
+
+  <!-- Flirt Machine -->
+  <div class="decor-box">
+    <p>Tap a button for an ultra-flirty line 😉💘</p>
+    <button class="magic-btn" onclick="flirt(); fireworks(event)">Flirt Line 💘</button>
+    <div id="flirt-line" style="margin-top:15px;font-size:22px;font-weight:700;color:#9b41c9;"></div>
+  </div>
+
+  <!-- Random Compliment -->
+  <div class="decor-box" style="margin-top:25px;">
+    <p>Or get a random compliment 💜🌸</p>
+    <button class="magic-btn" onclick="compliment(); fireworks(event)">Compliment ✨</button>
+    <div id="compliment-line" style="margin-top:15px;font-size:20px;font-weight:600;color:#c441c4;"></div>
+  </div>
+
+  <!-- Teleport Buttons -->
+  <div class="decor-box" style="margin-top:30px;">
+    <p>Teleport anywhere ✨💫</p>
+    <button class="magic-btn" onclick="location.href='#home'">Home 💗</button>
+    <button class="magic-btn" onclick="location.href='#about'">Your Glow ✨</button>
+    <button class="magic-btn" onclick="location.href='#memories'">Emoji Memories 🌸</button>
+  </div>
+</section>
+
+
+
+<script>
+  /* FLIRTY LINES */
+  function flirt() {
+    const lines = [
+      "Are you made of stardust? Because you shine way too beautifully ✨💖",
+      "Every time you smile, a thousand hearts faint 💘😳",
+      "You're not just pretty — you're unfairly pretty 😌🌸",
+      "If gorgeous was a crime, you'd be serving life 💗💫"
+    ];
+    document.getElementById('flirt-line').innerText = lines[Math.floor(Math.random() * lines.length)];
+  }
+
+  /* COMPLIMENT MACHINE */
+  function compliment() {
+    const c = [
+      "You're effortlessly lovable 💕",
+      "Your vibe is pure sunshine 🌞💗",
+      "Your presence feels like soft music 🎶💜",
+      "You're the kind of person people never forget ✨🌸"
+    ];
+    document.getElementById('compliment-line').innerText = c[Math.floor(Math.random() * c.length)];
+  }
+
+  /* FIREWORK EMOJI */
+  function fireworks(e) {
+    const fw = document.createElement('div');
+    fw.className = 'firework';
+    fw.style.left = e.clientX + 'px';
+    fw.style.top = e.clientY + 'px';
+    fw.innerText = '💥';
+    document.body.appendChild(fw);
+    setTimeout(() => fw.remove(), 900);
+  }
+
+  /* RANDOM FLOATING HEARTS */
+  function spawnHearts() {
+    const bg = document.getElementById('heart-bg');
+    const emoji = ['💖','💕','💗','🌸','✨'];
+    const el = document.createElement('div');
+    el.className = 'heart';
+    el.style.left = Math.random() * 100 + '%';
+    el.style.bottom = '-20px';
+    el.innerText = emoji[Math.floor(Math.random()*emoji.length)];
+    bg.appendChild(el);
+    setTimeout(() => el.remove(), 6000);
+  }
+  setInterval(spawnHearts, 600);
+
+  /* MOUSE EMOJI TRAIL */
+  document.addEventListener('mousemove', function(e) {
+    const emoji = ['💖','✨','🌸','💗'];
+    const t = document.createElement('div');
+    t.className = 'trail-emoji';
+    t.style.left = e.pageX + 'px';
+    t.style.top = e.pageY + 'px';
+    t.innerText = emoji[Math.floor(Math.random()*emoji.length)];
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 900);
+  });
+</script>
+
+<div class="extra-content" style="padding:40px; text-align:center; font-size:1.3rem; line-height:1.8;">
+<h2>💖 Endless Compliments</h2>
+<p>✨ You make even silence beautiful.<br>🌸 Your smile beats every sunrise.<br>💜 You turn ordinary moments into magic.<br>🔥 Even stars envy your glow.<br>🌟 If kindness had a face, it would look like you.<br>💘 Every version of you is my favorite.<br>💞 You’re the kind of person poems are jealous of.<br>💗 You're the soft chaos everyone secretly loves.<br>🌈 You're the reason colors look brighter.<br>💫 Even your "hi" feels like a festival.<br></p>
+
+<h2>🌸 Extra Decoration Zone</h2>
+<p>💐🌸💖✨💞🌙⭐🌺💗🎀💘🌈🌟<br>Here’s a whole field of emojis just to make the page feel fuller and sweeter.<br>Tap them! They sparkle. 💫</p>
+
+<h2>🌟 Secret Flirty Lines</h2>
+<p>😉 "If being cute was an exam, you'd top the batch."<br>😳 "Your face should come with a warning: too adorable to handle."<br>💗 "Are you gravity? Because I'm falling for you again and again."<br>🔥 "Careful—your glow is overheating the internet."<br>🌸 "You’re not a chapter… you’re the whole aesthetic novel."<br></p>
+
+<h2>🎉 Mini Sections Just for Fun</h2>
+<p>💞 **Crush Meter**: 999/1000 (It broke because of you 😭💗)<br>🎀 **Vibe Level**: Princess Mode 👑💓<br>🌈 **Aesthetic Score**: Off the charts 💫✨<br>💘 **Heart-Stealing Ability**: Maxed out 💞<br></p>
+
+<h2>💌 Little Surprises</h2>
+<p>🌸 Hold your finger on the screen for a rain of flowers.<br>✨ Scroll fast—sparkles appear everywhere.<br>💗 Click the title “For Anshika” for a heart explosion.<br></p>
+
+<h2>🌺 Bonus Memory Lane</h2>
+<p>🦋 The imaginary picnic we never had but totally should.<br>🍫 That time you said something normal and my brain went "wow she’s adorable."<br>🌙 Every night conversation that never happened but would've been perfect.<br></p>
+</div>
+</body>
