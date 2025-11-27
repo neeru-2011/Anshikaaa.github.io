@@ -3,22 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For Anshika 💖🌸</title>
+  <title>Anshika's Sparkling World 💖✨</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --primary-pink: #ff69b4; /* Hot Pink */
+      --secondary-pink: #ffb6c1; /* Light Pink */
+      --primary-purple: #a020f0; /* Darker Purple */
+      --light-bg: #fdf5ff; /* Near White Lavender */
+      --text-color: #381a4b;
+    }
+
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffe6fa, #f3d8ff, #ffe4ff);
-      color: #4b2e63;
+      font-family: 'Montserrat', sans-serif;
+      /* New, softer, more dreamy gradient */
+      background: linear-gradient(135deg, #fef2f7, #fde7ff, #f7d6ff);
+      color: var(--text-color);
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
 
-    /* Animated Background Hearts */
+    /* Animated Background Emojis */
     .heart-bg {
       position: fixed;
       top: 0;
@@ -31,26 +39,28 @@
     }
     .heart {
       position: absolute;
-      font-size: 20px;
-      color: #ff8ad4;
-      animation: floatUp 6s infinite linear;
-      opacity: 0.6;
+      font-size: 26px;
+      color: var(--primary-pink);
+      animation: floatUp 10s infinite linear; /* Slower, dreamier animation */
+      opacity: 0.7;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
     @keyframes floatUp {
       0% { transform: translateY(0); opacity: .8; }
-      100% { transform: translateY(-120vh); opacity: 0; }
+      100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
     }
 
     /* Mouse Emoji Trail */
     .trail-emoji {
       position: fixed;
-      font-size: 22px;
+      font-size: 28px;
       pointer-events: none;
-      animation: vanish 1s forwards;
+      animation: vanish 0.6s forwards;
+      z-index: 9999;
     }
     @keyframes vanish {
       0% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0); }
+      100% { opacity: 0; transform: scale(0.3); }
     }
 
     /* Header */
@@ -58,34 +68,37 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(15px);
       display: flex;
       justify-content: center;
-      padding: 14px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      padding: 16px 0;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
       z-index: 2000;
     }
 
     nav a {
-      margin: 0 8px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: 600;
-      padding: 10px 20px;
-      border-radius: 25px;
-      color: #7a4c8d;
-      background: rgba(255,255,255,0.6);
+      padding: 12px 24px;
+      border-radius: 35px;
+      color: var(--primary-purple);
+      background: var(--secondary-pink);
       transition: 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     nav a:hover {
-      background: #f0c8ff;
-      transform: scale(1.1);
+      background: var(--primary-purple);
+      color: var(--light-bg);
+      transform: translateY(-3px) scale(1.08);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     }
 
     /* Sections */
     section {
       padding: 140px 20px 80px;
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -94,252 +107,347 @@
       position: relative;
     }
 
+    h1, h2 {
+      font-family: 'Pacifico', cursive;
+      color: var(--primary-purple);
+      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+    }
+    h1 { font-size: 65px; margin-bottom: 0; letter-spacing: 2px;}
+    h2 { font-size: 45px; margin-top: 5px;}
+
     .decor-box {
-      background: rgba(255,255,255,0.65);
-      padding: 25px;
-      border-radius: 22px;
+      background: rgba(255,255,255,0.9);
+      padding: 35px;
+      border-radius: 30px;
       max-width: 750px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
-      backdrop-filter: blur(5px);
-      margin-top: 20px;
-      font-size: 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+      margin-top: 25px;
+      font-size: 20px;
+      line-height: 1.7;
     }
 
-    /* Super Buttons */
+    /* Magic Buttons */
     .magic-btn {
-      padding: 12px 22px;
-      margin: 8px;
-      background: linear-gradient(135deg, #ffa6f6, #d6a4ff);
+      padding: 15px 30px;
+      margin: 12px 10px;
+      background: linear-gradient(135deg, var(--primary-pink), #ff98e1, var(--primary-purple));
       border: none;
-      border-radius: 25px;
+      border-radius: 35px;
       cursor: pointer;
       color: white;
       font-weight: 700;
-      font-size: 16px;
-      transition: .3s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-size: 18px;
+      transition: .4s;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+      text-transform: uppercase;
     }
     .magic-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      filter: brightness(1.1);
+    }
+    
+    /* Confetti Animation */
+    .confetti {
+        position: fixed;
+        font-size: 30px;
+        animation: burst 1s ease-out;
+        pointer-events: none;
+        z-index: 3000;
+    }
+    @keyframes burst {
+        0% { opacity:1; transform: scale(0); }
+        100% { opacity:0; transform: scale(2); }
     }
 
-    /* Firework Animation */
-    .firework {
-      position: fixed;
-      font-size: 20px;
-      animation: boom 1s ease-out;
-      pointer-events: none;
+    /* Pop-up Message */
+    #mcq-popup {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--primary-purple);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 15px;
+        font-size: 24px;
+        font-weight: 700;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s;
+        z-index: 5000;
     }
-    @keyframes boom {
-      0% { opacity:1; transform: scale(0); }
-      100% { opacity:0; transform: scale(2); }
-    }
-
-    /* Contact Form */
-    form input, form textarea {
-      width: 90%;
-      max-width: 350px;
-      padding: 12px;
-      margin: 8px 0;
-      border-radius: 10px;
-      border: 1px solid #d1a8ff;
-    }
-    form button {
-      padding: 12px 20px;
-      background: #c28aff;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      font-weight: bold;
+    .popup-visible {
+        opacity: 1 !important;
+        transform: translate(-50%, -50%) scale(1.1) !important;
     }
   </style>
 </head>
 <body>
 
-<!-- Animated Heart Background -->
 <div class="heart-bg" id="heart-bg"></div>
+
+<div id="mcq-popup">Nice choice yarrr 💜</div>
 
 <header>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About You</a>
-    <a href="#friends">Friends</a>
-    <a href="#memories">Memories</a>
-    <a href="#fun">Fun Zone</a>
-    
+    <a href="#home">Home 🏠</a>
+    <a href="#about">Your Glow ✨</a>
+    <a href="#friends">Friend MVPs 👭</a>
+    <a href="#memories">Memories 📚</a>
+    <a href="#love-quiz">Love Quiz 💜</a>
+    <a href="#fun">Fun Zone 🎉</a>
   </nav>
 </header>
 
-<!-- HOME -->
 <section id="home">
-  <h1 style="font-size:40px;">For Anshika 💖🌸✨</h1>
+  <h1>For Anshika 💖🌸✨</h1>
+  <p style="font-size:24px; color:var(--primary-purple); font-weight:700;">
+    यह सिर्फ तुम्हारे लिए है! (This is just for you!)
+  </p>
 
   <div class="decor-box">
-    <p>Welcome to your own pastel universe filled with love, sparkles & magic 💕✨</p>
-    <p>You make the world brighter just by being in it 🌸💫</p>
+    <p>Tumhari presence (Your presence) **soft sunlight** jaisi feel hoti hai 💜✨. You are genuinely one of the most wonderful people.</p>
+    <p>I know things are in the 'friend zone' for now, and that's okay. But I wanted you to know that my heart genuinely thinks you're special, **no pressure, only good wishes** 😊</p>
+    <p>Tumhari smile? Certified **heart-melter** 💘. Tumhari energy? **Warm, rare, and utterly unforgettable** 🌸💫</p>
   </div>
 
   <div class="decor-box" style="margin-top:30px;">
-    <button class="magic-btn" onclick="fireworks(event);location.href='#about'">Why You're Beautiful 💗</button>
-    <button class="magic-btn" onclick="fireworks(event);location.href='#fun'">Fun Zone 🎉</button>
-    <button class="magic-btn" onclick="fireworks(event);location.href='#contact'">Send a Hi 💌</button>
+    <button class="magic-btn" onclick="confetti(event);location.href='#about'">Why You're Perfect 💗</button>
+    <button class="magic-btn" onclick="confetti(event);location.href='#love-quiz'">Start the Quiz 💜</button>
+    <button class="magic-btn" onclick="confetti(event);location.href='#fun'">The Fun Zone 🎉</button>
   </div>
 </section>
 
-<!-- MCQ FUN START -->
-<div class="decor-box" style="margin-top:40px;">
-  <h2>💜 Quick Questions for You 💜</h2>
-  <p style="font-size:20px;">Do you love me back? 😳💘</p>
-  <button class="magic-btn">Yes 💗</button>
-  <button class="magic-btn">Ofc 😌💞</button>
-  <p style="font-size:20px;margin-top:20px;">Do you think I'm cute? 😉✨</p>
-  <button class="magic-btn">Yes 😍</button>
-  <button class="magic-btn">Ofc ✨</button>
-  <p style="font-size:20px;margin-top:20px;">Should we celebrate your birthday on 30 July together? 🎂💜</p>
-  <button class="magic-btn">Yes 🎉</button>
-  <button class="magic-btn">Ofc 😘</button>
-  <div style="font-size:30px;margin-top:20px;">💜🌸💖✨🌺💘💞💫💐💟💗💜</div>
-</div>
-<!-- MCQ FUN END -->
+<section id="birthday" style="padding:40px 20px; min-height:10vh;">
+  <h2 style="font-size:35px;">🎂 Birthday Countdown (30 July) 🎂</h2>
+  <div class="decor-box">
+    <p style="font-size:20px;">Tumhara birthday aane mein (Your birthday is coming in):</p>
+    <h1 id="countdown" style="font-size:50px; margin-top:10px; color:var(--primary-pink); font-family: 'Montserrat', sans-serif;"></h1>
+    <p style="font-size:18px; margin-top:10px;">We will definitely celebrate! 🎉</p>
+  </div>
+</section>
 
-<!-- ABOUT -->
 <section id="about">
-  <h2>About You ✨💞</h2>
+  <h2>Your Amazing Glow ✨💞</h2>
   <div class="decor-box">
-    <p>You’re the kind of person whose presence feels like soft sunlight 💜✨</p>
-    <p>Your smile? Certified heart‑melter 💘😊</p>
-    <p>Your energy? Warm, rare, unforgettable 🌸💫</p>
+    <p>You have a wonderful mix of **kindness (दयालुता), intelligence (बुद्धि), and a rare charm** that makes you stand out effortlessly 😌.</p>
+    <p>I find you incredibly **lovable and beautifully unique** 🌸💫. Kabhi mat bhulna (Never forget this)!</p>
+    <p style="font-weight:600;">You are perfect, Anshika, just the way you are. Take your time, main hamesha yahaan hoon (I am always here) as your well-wisher 💜.</p>
   </div>
 </section>
 
-<!-- FRIENDS -->
 <section id="friends">
-  <h2>Ashi & Priyanshi 👭🌸✨</h2>
+  <h2>Ashi & Priyanshi: Friend MVPs 👭🌸✨</h2>
   <div class="decor-box">
-    <p>Two amazing souls who add sparkle to your world ✨</p>
-    <p>They’re the real MVPs of friendship 👑💖</p>
+    <p>These two souls aren't just friends; they're the **main characters** in your support system. A truly great squad! **Do jism, ek jaan** (Two bodies, one soul).</p>
+    <p>Cherish those bonds! They add immense **sparkle and strength** to your world ✨💖</p>
   </div>
 </section>
 
-<!-- MEMORIES -->
 <section id="memories">
-  <h2>Emoji Memories 📚💘✨</h2>
+  <h2>Emoji Memory Lane 📚💘✨</h2>
   <div class="decor-box">
-    <p>💖 Random laughs that healed everything</p>
-    <p>🌺 Cute chaos & dumb jokes</p>
-    <p>💞 Silent glances that felt like whole conversations</p>
-    <p>🌙 Inside jokes only you understand</p>
+    <p>💖 **Random laughs** that instantly healed everything (woh hansi).</p>
+    <p>🌺 **Cute chaos** and jokes that only make sense to us (humare jokes).</p>
+    <p>💞 **Silent glances** that felt like whole conversations (chup-chaap baatein).</p>
+    <p>🌙 **Inside jokes** that are the secret language of our hearts (humare raaz).</p>
+    <p>💫 **Every time** you shared a genuine smile (jab tum muskuraati ho).</p>
   </div>
 </section>
 
-<!-- FUN ZONE -->
+<section id="love-quiz">
+    <h2>💜 The Anshika Quiz 💜</h2>
+    <div class="decor-box" style="max-width: 650px;">
+
+        <p id="quiz-response" style="margin:10px 0 30px;font-size:25px;font-weight:800;color:var(--primary-pink);min-height:30px;">
+            Answer the questions below to unlock a sweet message!
+        </p>
+
+        <div class="quiz-question">
+            <p>Do you think I'm cute? 😉✨</p>
+            <button class="magic-btn quiz-btn" onclick="handleQuiz(event, 'I knew you thought so! You are my favorite answer 😌💖')">Yes 😍</button>
+            <button class="magic-btn quiz-btn" onclick="handleQuiz(event, 'I knew you thought so! You are my favorite answer 😌💖')">Of course ✨</button>
+        </div>
+
+        <div class="quiz-question" style="margin-top:25px;">
+            <p>Would you go on a cute aesthetic date with me (in the future, no pressure)? 🌸</p>
+            <button class="magic-btn quiz-btn" onclick="handleQuiz(event, 'Date confirmed! Main wait karunga (I will wait) 💐💜')">Yes 💗</button>
+            <button class="magic-btn quiz-btn" onclick="handleQuiz(event, 'Date confirmed! Main wait karunga (I will wait) 💐💜')">Of course 💘</button>
+        </div>
+
+        <div class="quiz-question" style="margin-top:25px;">
+            <p>Do you want me to keep making you smile? 😊</p>
+            <button class="magic-btn quiz-btn" onclick="handleQuiz(event, 'That is my favorite job! Tumhe hamesha khush rakhunga (Will always keep you happy) 🎉')">Yes 🎉</button>
+            <button class="magic-btn quiz-btn" onclick="handleQuiz(event, 'That is my favorite job! Tumhe hamesha khush rakhunga (Will always keep you happy) 🎉')">Ofc 😘</button>
+        </div>
+
+    </div>
+</section>
+
 <section id="fun">
   <h2>Fun Zone 🎉💗</h2>
 
-  <!-- Flirt Machine -->
   <div class="decor-box">
-    <p>Tap a button for an ultra-flirty line 😉💘</p>
-    <button class="magic-btn" onclick="flirt(); fireworks(event)">Flirt Line 💘</button>
-    <div id="flirt-line" style="margin-top:15px;font-size:22px;font-weight:700;color:#9b41c9;"></div>
+    <p>Tap for an ultra-flirty line 😉💘</p>
+    <button class="magic-btn" onclick="flirt(); confetti(event)">Flirt Line 💘</button>
+    <div id="flirt-line" style="margin-top:15px;font-size:22px;font-weight:700;color:var(--primary-purple);"></div>
   </div>
 
-  <!-- Random Compliment -->
   <div class="decor-box" style="margin-top:25px;">
-    <p>Or get a random compliment 💜🌸</p>
-    <button class="magic-btn" onclick="compliment(); fireworks(event)">Compliment ✨</button>
-    <div id="compliment-line" style="margin-top:15px;font-size:20px;font-weight:600;color:#c441c4;"></div>
+    <p>Or get a random, genuine compliment 💜🌸</p>
+    <button class="magic-btn" onclick="compliment(); confetti(event)">Compliment ✨</button>
+    <div id="compliment-line" style="margin-top:15px;font-size:20px;font-weight:600;color:var(--primary-pink);"></div>
   </div>
 
-  <!-- Teleport Buttons -->
-  <div class="decor-box" style="margin-top:30px;">
-    <p>Teleport anywhere ✨💫</p>
-    <button class="magic-btn" onclick="location.href='#home'">Home 💗</button>
-    <button class="magic-btn" onclick="location.href='#about'">Your Glow ✨</button>
-    <button class="magic-btn" onclick="location.href='#memories'">Emoji Memories 🌸</button>
+  <div class="decor-box" style="margin-top:40px;">
+    <h3>💘 Unlock My Heart</h3>
+    <p>Click the heart **10 times** to unlock my real, honest message (no pressure, just my feelings)!</p>
+    <div id="heart-clicker" style="font-size: 90px; margin: 15px; cursor: pointer; transition: transform 0.1s;">💗</div>
+    <p id="heart-message" style="font-size: 24px; font-weight: 800; color: var(--primary-purple); display: none; line-height: 1.5;">
+        Tumhara 'haan' ya 'naa' matter karta hai, lekin usse zyada tumhari khushi (Your 'yes' or 'no' matters, but more than that, your happiness).
+        <br>
+        <span style="color:var(--primary-pink);">I'm genuinely crazy about you, Anshika.</span> But I respect your space. Take all the time you need. I'll be here, as your biggest fan. 💜✨
+    </p>
   </div>
 </section>
 
-
-
 <script>
-  /* FLIRTY LINES */
+  /* CONFIGURATION */
+  const TRAIL_EMOJIS = ['💖', '✨', '🌸', '💗', '💜'];
+  const BG_EMOJIS = ['💖', '💕', '💗', '🌸', '✨', '🌹', '💜', '💫', '🦋'];
+  const CONFETTI_EMOJIS = ['💥', '🎉', '💜', '💖', '✨'];
+  const FLIRT_LINES = [
+    "Are you made of stardust? Because you shine way too beautifully ✨💖",
+    "Every time you smile, a thousand hearts faint 💘😳",
+    "You're not just pretty — you're unfairly pretty 😌🌸",
+    "If gorgeous was a crime, you'd be serving life 💗💫"
+  ];
+  const COMPLIMENTS = [
+    "You're effortlessly lovable 💕",
+    "Your vibe is pure sunshine 🌞💗",
+    "Your presence feels like soft music 🎶💜",
+    "You're the kind of person people never forget ✨🌸"
+  ];
+  const mcqPopup = document.getElementById('mcq-popup');
+
+  /* --- CORE FUNCTIONS --- */
+
+  // 1. Confetti Burst
+  function confetti(e) {
+    // playClick(); // Removed due to browser restrictions on audio
+    for(let i=0; i<5; i++){
+        const fw = document.createElement('div');
+        fw.className = 'confetti';
+        fw.style.left = (e.clientX + (Math.random()*40-20)) + 'px';
+        fw.style.top = (e.clientY + (Math.random()*40-20)) + 'px';
+        fw.innerText = CONFETTI_EMOJIS[Math.floor(Math.random() * CONFETTI_EMOJIS.length)];
+        document.body.appendChild(fw);
+        setTimeout(() => fw.remove(), 900);
+    }
+  }
+
+  // 2. Flirty Lines
   function flirt() {
-    const lines = [
-      "Are you made of stardust? Because you shine way too beautifully ✨💖",
-      "Every time you smile, a thousand hearts faint 💘😳",
-      "You're not just pretty — you're unfairly pretty 😌🌸",
-      "If gorgeous was a crime, you'd be serving life 💗💫"
-    ];
-    document.getElementById('flirt-line').innerText = lines[Math.floor(Math.random() * lines.length)];
+    document.getElementById('flirt-line').innerText = FLIRT_LINES[Math.floor(Math.random() * FLIRT_LINES.length)];
   }
 
-  /* COMPLIMENT MACHINE */
+  // 3. Compliment Machine
   function compliment() {
-    const c = [
-      "You're effortlessly lovable 💕",
-      "Your vibe is pure sunshine 🌞💗",
-      "Your presence feels like soft music 🎶💜",
-      "You're the kind of person people never forget ✨🌸"
-    ];
-    document.getElementById('compliment-line').innerText = c[Math.floor(Math.random() * c.length)];
+    document.getElementById('compliment-line').innerText = COMPLIMENTS[Math.floor(Math.random() * COMPLIMENTS.length)];
   }
+  
+  // 4. Unified Quiz Handler with Pop-up
+  document.querySelectorAll('.quiz-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+          confetti(e);
+          const responseText = btn.onclick.toString().match(/'([^']*)'/)[1]; // Extract message from inline onclick
+          document.getElementById('quiz-response').innerText = responseText;
+          
+          // Show pop-up
+          mcqPopup.classList.add('popup-visible');
+          setTimeout(() => {
+              mcqPopup.classList.remove('popup-visible');
+          }, 2000);
+      });
+  });
 
-  /* FIREWORK EMOJI */
-  function fireworks(e) {
-    const fw = document.createElement('div');
-    fw.className = 'firework';
-    fw.style.left = e.clientX + 'px';
-    fw.style.top = e.clientY + 'px';
-    fw.innerText = '💥';
-    document.body.appendChild(fw);
-    setTimeout(() => fw.remove(), 900);
-  }
+  // 5. Heart Clicker Game
+  let heartClicks = 0;
+  const heartClicker = document.getElementById('heart-clicker');
+  heartClicker.addEventListener('click', (e) => {
+    heartClicks++;
+    confetti(e);
+    heartClicker.style.transform = 'scale(0.9)'; // Click effect
+    setTimeout(() => heartClicker.style.transform = 'scale(1)', 100);
 
-  /* RANDOM FLOATING HEARTS */
+    if (heartClicks < 5) heartClicker.textContent = '💖';
+    else if (heartClicks < 10) heartClicker.textContent = '💘';
+    else {
+      heartClicker.textContent = '💞';
+      document.getElementById('heart-message').style.display = 'block';
+      heartClicker.style.cursor = 'default';
+      heartClicker.removeEventListener('click', heartClicker.parentElement.querySelector('button'));
+    }
+  });
+
+
+  /* --- ANIMATION / TIMERS --- */
+
+  // 6. Random Floating Emojis (Increased density)
   function spawnHearts() {
     const bg = document.getElementById('heart-bg');
-    const emoji = ['💖','💕','💗','🌸','✨'];
-    const el = document.createElement('div');
-    el.className = 'heart';
-    el.style.left = Math.random() * 100 + '%';
-    el.style.bottom = '-20px';
-    el.innerText = emoji[Math.floor(Math.random()*emoji.length)];
-    bg.appendChild(el);
-    setTimeout(() => el.remove(), 6000);
+    for(let i=0; i<4; i++){ // Spawn 4 emojis every interval
+      const el = document.createElement('div');
+      el.className = 'heart';
+      el.style.left = Math.random() * 100 + '%';
+      el.style.bottom = '-20px';
+      el.style.animationDuration = (8 + Math.random()*4) + 's'; // Varied speed
+      el.style.fontSize = (25 + Math.random()*15)+'px';
+      el.innerText = BG_EMOJIS[Math.floor(Math.random()*BG_EMOJIS.length)];
+      bg.appendChild(el);
+      setTimeout(() => el.remove(), 12000);
+    }
   }
-  setInterval(spawnHearts, 600);
+  setInterval(spawnHearts, 250); // Faster interval
 
-  /* MOUSE EMOJI TRAIL */
+  // 7. Mouse Emoji Trail
   document.addEventListener('mousemove', function(e) {
-    const emoji = ['💖','✨','🌸','💗'];
     const t = document.createElement('div');
     t.className = 'trail-emoji';
     t.style.left = e.pageX + 'px';
     t.style.top = e.pageY + 'px';
-    t.innerText = emoji[Math.floor(Math.random()*emoji.length)];
+    t.innerText = TRAIL_EMOJIS[Math.floor(Math.random()*TRAIL_EMOJIS.length)];
     document.body.appendChild(t);
-    setTimeout(() => t.remove(), 900);
+    setTimeout(() => t.remove(), 600);
   });
+
+  // 8. Birthday Countdown
+  function updateCountdown() {
+      const now = new Date();
+      // 30 July is month index 6
+      let nextBirthday = new Date(now.getFullYear(), 6, 30); 
+      // If the current date is after July 30th, set it for next year
+      if (now > nextBirthday) nextBirthday = new Date(now.getFullYear() + 1, 6, 30);
+      
+      const diff = nextBirthday - now;
+      
+      if (diff < 0) { // Should not happen with the check above, but for safety
+          document.getElementById('countdown').innerText = "Happy Birthday! 🎉";
+          return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+      
+      document.getElementById('countdown').innerText = `${days}d ${hours}h ${mins}m ${secs}s`;
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // Run once immediately
+
 </script>
-
-<div class="extra-content" style="padding:40px; text-align:center; font-size:1.3rem; line-height:1.8;">
-<h2>💖 Endless Compliments</h2>
-<p>✨ You make even silence beautiful.<br>🌸 Your smile beats every sunrise.<br>💜 You turn ordinary moments into magic.<br>🔥 Even stars envy your glow.<br>🌟 If kindness had a face, it would look like you.<br>💘 Every version of you is my favorite.<br>💞 You’re the kind of person poems are jealous of.<br>💗 You're the soft chaos everyone secretly loves.<br>🌈 You're the reason colors look brighter.<br>💫 Even your "hi" feels like a festival.<br></p>
-
-<h2>🌸 Extra Decoration Zone</h2>
-<p>💐🌸💖✨💞🌙⭐🌺💗🎀💘🌈🌟<br>Here’s a whole field of emojis just to make the page feel fuller and sweeter.<br>Tap them! They sparkle. 💫</p>
-
-<h2>🌟 Secret Flirty Lines</h2>
-<p>😉 "If being cute was an exam, you'd top the batch."<br>😳 "Your face should come with a warning: too adorable to handle."<br>💗 "Are you gravity? Because I'm falling for you again and again."<br>🔥 "Careful—your glow is overheating the internet."<br>🌸 "You’re not a chapter… you’re the whole aesthetic novel."<br></p>
-
-<h2>🎉 Mini Sections Just for Fun</h2>
-<p>💞 **Crush Meter**: 999/1000 (It broke because of you 😭💗)<br>🎀 **Vibe Level**: Princess Mode 👑💓<br>🌈 **Aesthetic Score**: Off the charts 💫✨<br>💘 **Heart-Stealing Ability**: Maxed out 💞<br></p>
-
-<h2>💌 Little Surprises</h2>
-<p>🌸 Hold your finger on the screen for a rain of flowers.<br>✨ Scroll fast—sparkles appear everywhere.<br>💗 Click the title “For Anshika” for a heart explosion.<br></p>
-
-<h2>🌺 Bonus Memory Lane</h2>
-<p>🦋 The imaginary picnic we never had but totally should.<br>🍫 That time you said something normal and my brain went "wow she’s adorable."<br>🌙 Every night conversation that never happened but would've been perfect.<br></p>
-</div>
 </body>
+</html>
